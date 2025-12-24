@@ -23,7 +23,7 @@ public class Binomial {
 		//// and then initializes all its elements to -1.
 		//// It then calls binomial(n, k, memo), which does all the heavy lifiting.
 		//// Replace the following statement with your code.
-		int [][] memo = new int[n + 1][k + 1];
+		long [][] memo = new long[n + 1][k + 1];
 		for (int i = 0; i <= n; i++) {	
 			for (int j = 0; j <= k; j++) {
 				memo[i][j] = -1;
@@ -32,23 +32,18 @@ public class Binomial {
 		return binomial(n, k, memo);
 	}
 
-	private static int binomial(int n, int k, int[][] memo) {
-		if (memo[n][k] != -1) {
-			return memo[n][k];
-		}
-		// Base case
-		if ((k > n)) {
-		   	memo[n][k] = 0; 
-		   	return 0;
-		}
-		// Another base case
-		if (n == 0 || k == 0) {
-		   	memo[n][k] = 1; 
-		   	return 1;
-		}
-		memo[n][k] = binomial(n - 1, k, memo) + binomial(n - 1, k - 1, memo);
-		return memo[n][k];
-	}
+	private static long binomial(int n, int k, long[][] memo) {
+        if (k > n) return 0;
+        if (n == 0 || k == 0) return 1;
+
+        if (memo[n][k] != -1) {
+            return memo[n][k];
+        }
+
+        // Removed the (int) cast; both terms and storage are now long
+        memo[n][k] = binomial(n - 1, k, memo) + binomial(n - 1, k - 1, memo);
+        return memo[n][k];
+    }
 }
 
 
