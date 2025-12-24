@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "Test INT_TO_BIN",
+      "setup": "javac Test.java IntToBin.java Binomial.java Palindrome.java",
+      "run": "java Test INT_TO_BIN 10 1 0 203 389 312 255 1024 2047 4096 8191",
+      "comparison": "included",
+      "input": "",
+      "output": "All test cases have passed",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Test IS_PALINDROME",
+      "setup": "javac Test.java IntToBin.java Binomial.java Palindrome.java",
+      "run": "java Test IS_PALINDROME racecar hello madam apple a baron aba abba abra ijacn abcd deed noon civic level rotor kayak refer palindrome notapalindrome almostpalindrome",
+      "comparison": "included",
+      "input": "",
+      "output": "All test cases have passed",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Test BINOMIAL",
+      "setup": "javac Test.java IntToBin.java Binomial.java Palindrome.java",
+      "run": "java Test BINOMIAL \"5,2,10\" \"10,5,252\" \"10,0,1\" \"10,10,1\" \"10,1,10\" \"10,9,10\" \"10,8,45\" \"10,7,120\" \"10,6,210\" \"10,4,210\" \"15,5,3003\" \"20,10,184756\"",
+      "comparison": "included",
+      "input": "",
+      "output": "All test cases have passed",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Test MEMO_BINOMIAL",
+      "setup": "javac Test.java IntToBin.java Binomial.java Palindrome.java",
+      "run": "java Test MEMO_BINOMIAL \"5,2,10\" \"10,5,252\" \"10,0,1\" \"10,10,1\" \"10,1,10\" \"10,9,10\" \"10,8,45\" \"10,7,120\" \"10,6,210\" \"35,13,1476337800\" \"39,11,1676056044\" \"50,25,126410606437752\" \"30,15,155117520\"",
+      "comparison": "included",
+      "input": "",
+      "output": "All test cases have passed",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "Test IS_SORTED",
+      "setup": "javac Test.java IntToBin.java Binomial.java Palindrome.java IsSorted.java",
+      "run": "java Test IS_SORTED \"1,2,3,4,5,6,7,8,9,10\" \"10,9,8,7,6,5,4,3,2,1\" \"1,1,1,1,1,1,1,1\" \"1,2,2,3,4,5,6,7,8,9\" \"10,20,30,40,50,60\" \"-10,-5,0,5,10,15,20\" \"3,3,3,2,1,0,-1\" \"1,3,2,4,5,6\" \"100,200,300,400,500,600\" \"-50,-40,-30,-20,-10,0,10\" \"50,40,30,20,10,0,-10\" \"1,2,3,5,4,6,7,8\" \"10,9,8,7,6,5,4,3,2,1,0\" \"0,1,2,3,4,5,6,7,8,9,10,-11,12,13,14,15\" \"15,14,13,12,11,10,9,8,7,6,5,4,3,2,1\" \"5,10,15,-20,25,30,35,40,45,50\" \"-1,2,3,4,5,6,8,7,9,-10\", ",
+      "comparison": "included",
+      "input": "",
+      "output": "All test cases have passed",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
