@@ -92,7 +92,7 @@ public class TestHandler {
         String expected = "" + value[2];
         String actual = "";
         try {
-            actual += Binomial.binomial1(n, k);
+            actual += Binomial.binomial(n, k);
         }  catch (StackOverflowError e) {
             this.tester.gotExceptions();
             actual = TesterMessagesEnum.ERROR.getMessage() + "Stack Overflow " + e.getMessage();
